@@ -1,0 +1,36 @@
+<div id="mine"></div>
+<div class="welcome" data-hello="qwertyuiop"></div>
+<div data-dolor="12"></div>
+
+<script>
+  var $ = document.querySelector.bind(document); // $ looked like a jQuery selector, so I made it one
+
+  const test = hello_world("welcome");
+  console.log(test + " [test]");
+
+  function hello_world(foo = "ipsum", bar) {
+    // unnecssary default arg and second arg
+    const $foo = $("." + foo);
+    return foo + ": " + $foo.dataset["hello"];
+  }
+
+  const loremIpsum = (dolor) => {
+    dolor = dolor || "dolor";
+    let test = "123456";
+    let val = $("[data-" + dolor + "]").dataset[dolor];
+    return `<p>Result [${test}]: ${test * val}</p>`;
+  };
+
+  const myDiv = $("#mine");
+  myDiv.innerHTML = loremIpsum();
+  myDiv.style.backgroundColor = "cyan";
+  myDiv.addEventListener("click", (event) => {
+    // $(this).find("p").css("color", "red");
+    event.target.style.color = "red";
+  });
+
+  let abc = { x: "1", y: "2", z: "3" };
+  const x = abc.x;
+  const y = abc.y;
+  console.log(x == 1 && y >= 2 ? "yeah" : "boo");
+</script>

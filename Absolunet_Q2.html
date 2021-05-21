@@ -1,0 +1,85 @@
+<!-- QUESTION 2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lorem</title>
+    <style>
+      h1::after {
+        position: absolute;
+        content: "⭐";
+        left: 5px;
+      }
+
+      h1::first-letter {
+        color: blue;
+        padding-left: 20px;
+      }
+
+      h1 {
+        color: gray;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0px;
+      }
+
+      div {
+        padding: 20px;
+      }
+
+      ul {
+        background-color: #f8f8f8;
+        column-count: 2;
+        max-width: 300px;
+        padding: 10px;
+        list-style: none;
+      }
+
+      li::before {
+        content: "\2022";
+        color: red;
+        display: inline-block;
+        width: 1em;
+      }
+
+      li:nth-child(2)::before {
+        content: "\2022";
+        color: red;
+        opacity: 20%;
+        display: inline-block;
+        width: 1em;
+      }
+
+      li:nth-child(n + 5)::before {
+        content: "-";
+        color: black;
+        display: inline-block;
+        width: 1em;
+      }
+
+      li:nth-child(4) {
+        color: green;
+      }
+
+      li {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Lorem ipsum</h1>
+      <ul>
+        <li>dolor</li>
+        <li>sit</li>
+        <li>amet</li>
+        <li>consectetur</li>
+        <li>adipiscing</li>
+        <li>elit</li>
+        <li>mauris</li>
+        <li>posuere</li>
+      </ul>
+    </div>
+  </body>
+</html>
