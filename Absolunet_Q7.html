@@ -3,13 +3,14 @@
 <div data-dolor="12"></div>
 
 <script>
-  var $ = document.querySelector.bind(document); // $ looked like a jQuery selector, so I made it one
+  // $ looked like a jQuery selector, so I made it one
+  var $ = document.querySelector.bind(document);
 
   const test = hello_world("welcome");
   console.log(test + " [test]");
 
+  // unnecssary default arg and second arg
   function hello_world(foo = "ipsum", bar) {
-    // unnecssary default arg and second arg
     const $foo = $("." + foo);
     return foo + ": " + $foo.dataset["hello"];
   }
